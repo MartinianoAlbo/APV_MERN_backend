@@ -167,10 +167,10 @@ const actualizarPerfil = async (req, res) => {
   const {email} = req.body;
   const existeEmail = await Veterinario.findOne({email})
 
-  if (existeEmail) {
-    const error = new Error('❌ El email ya esta en uso')
-    return res.status(400).json({ msg: error.message })
-  }
+  // if (existeEmail) {
+  //   const error = new Error('❌ El email ya esta en uso')
+  //   return res.status(400).json({ msg: error.message })
+  // }
 
   try {
 
